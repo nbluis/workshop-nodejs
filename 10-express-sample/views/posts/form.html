@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+</head>
+<body>
+	<form action="<%= (post.id ? '/posts/update/' + post.id :  '/posts/create') %>" method="POST">
+		<input type="hidden" name="id" value="<%=post.id%>" />
+		<label for="name">Nome</label>
+		<input type="text" name="name" id="name" value="<%=post.name%>"/>
+		<label for="content"/>Conteúdo</label>
+		<input type="textarea" name="content" id="content" value="<%=post.content%>"/>
+		<button type="submit">Salvar</button>		
+	</form>
+</body>
+</html>
