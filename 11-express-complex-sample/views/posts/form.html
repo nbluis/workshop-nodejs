@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+</head>
+<body>
+	<a href="/"><< Voltar</a>
+	<form action="<%= (post.id ? '/update/' + post.id :  '/create') %>" method="POST">
+		<input type="hidden" name="id" value="<%=post.id%>" />
+		<label for="name">Nome</label>
+		<br>
+		<input type="text" name="name" id="name" value="<%=post.name%>" size="90"/>
+		<br>
+		<label for="content"/>Conteúdo</label>
+		<br>
+		<textarea name="content" id="content" cols="90" rows="20"><%=post.content%></textarea>
+		<br>
+		<button type="submit">Salvar</button>		
+		<button type="reset">Reset</button>		
+	</form>
+</body>
+</html>

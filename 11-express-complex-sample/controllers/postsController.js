@@ -21,7 +21,7 @@ var PostsController = function () {
 	};
 
 	this.add = function(req, res) {
-		res.render('posts/form.html', {post:{}});
+		res.render('posts/form.html', {post:{name:'', content: ''}});
 	};
 
 	this.edit = function(req, res) {
@@ -42,7 +42,7 @@ var PostsController = function () {
 			[req.body.name, req.body.content],
 			function(err, result, fields) {
 				connection.end();
-				res.redirect('/posts');
+				res.redirect('/');
 			});
 	};
 
@@ -53,7 +53,7 @@ var PostsController = function () {
 			[req.body.name, req.body.content, req.params.id],
 			function(err, result, fields) {
 				connection.end();
-				res.redirect('/posts');
+				res.redirect('/');
 			});
 	};
 
@@ -64,7 +64,7 @@ var PostsController = function () {
 			[req.params.id],
 			function(err, result, fields) {
 				connection.end();
-				res.redirect('/posts');
+				res.redirect('/');
 			});
 	};
 
