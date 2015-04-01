@@ -6,16 +6,24 @@
 	 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<section class="chat-section">
+	<section class="identificacao">
+		<input type="text" id="nome" />
+		<button type="button" id="botao-login">Entrar</button>
+	</section>
+	<section class="chat-section" style="display:none">
 		<h2>
 			Current users: <span id="chat-users"></span>
+		</h2>
+		<h2>
+			Olá <span id="chat-user"></span>
 		</h2>
 		<br>
 
 		<div class="chat-panel"></div>
-		<br>
+		<ul id="nomes"></ul>
 
 		<textarea class="chat-message"></textarea>
+
 		<br>
 
 		<button type="button" id="send-button">Send message</button>
